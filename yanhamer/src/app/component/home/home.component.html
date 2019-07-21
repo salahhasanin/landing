@@ -1,0 +1,189 @@
+<!--home sections-->
+<section class="sections home text-center">
+  <div class="overlay">
+    <div class="container lown">
+      <div class="home-content">
+        <h3 class="home-title">YANHAMER</h3>
+        <p class="home-desc lead">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio,
+          eaque ex! Veniam est molestiae voluptate!
+        </p>
+        <button class="btn button">More</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!--./end home-->
+<!--About sections-->
+<section class="sections about">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="section-title ">About Us</h2>
+      <div class="line">
+        <span></span>
+      </div>
+    </div>
+    <!--./section header-->
+    <div class="row about-content">
+      <div class="col-md-4">
+        <h2>Vision</h2>
+        <p class="content">
+          Adopting the machine-human synergism to unleash the maximum of human
+          capabilities to push humanity limits and boundaries to infinity.
+        </p>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-7">
+        <h2>Mission</h2>
+        <p class="content">
+          Continuous exploration and analysis of obstacles to human evolution,
+          spotting weaknesses, problems and needs that already exist now or
+          foreseeing them in the future. Designing innovative smart attainable
+          and scalable tech solutions for this hotspots. Digging for the elite
+          human brains who can engineer this designs and bring them to light.
+          Nurturing the ideal work environment that ensures success. Reaching
+          out to the hell of the whole world!
+        </p>
+      </div>
+    </div>
+    <!--./close row-->
+    <h2 class="values">Values</h2>
+    <div class="row move">
+      <div class="col-md-4 col-xs-12">
+        <div class="stat-info ">
+          <p class="values-item Transparency">Transparency</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-xs-12">
+        <div class="stat-info ">
+          <p class="values-item Trust">Trust</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-xs-12">
+        <div class="stat-info ">
+          <p class="values-item Persistence">Persistence</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-xs-12">
+        <div class="stat-info ">
+          <p class="values-item Synergism">Synergism</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-xs-12">
+        <div class="stat-info ">
+          <p class="values-item Focus">Focus</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-xs-12">
+        <div class="stat-info ">
+          <p class="values-item Joy">Joy</p>
+        </div>
+      </div>
+    </div>
+    <!--./close row-->
+  </div>
+  <!--./ close container-->
+</section>
+
+<section class="sections contact">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="section-title ">Contact Us</h2>
+      <div class="line">
+        <span></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-7">
+        <form
+          #signUpForm="ngForm"
+          (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)"
+        >
+          <label for="phone">Name</label>
+          <input
+            type="text"
+            #username="ngModel"
+            [(ngModel)]="contactService.selectedContact.username"
+            name="username"
+            placeholder=" Your Name..."
+            required
+            [ngClass]="{
+              'invalid-textbox': signUpForm.submitted && !username.valid
+            }"
+          />
+          <div *ngIf="signUpForm.submitted && !username.valid">
+            <label class="validation-message">This field is required.</label>
+          </div>
+          <label for="phone">Email</label>
+          <input
+            type="text"
+            #email="ngModel"
+            [(ngModel)]="contactService.selectedContact.email"
+            name="email"
+            placeholder="Your Email..."
+            required
+            [pattern]="emailRegex"
+            [ngClass]="{
+              'invalid-textbox': signUpForm.submitted && !email.valid
+            }"
+          />
+          <div *ngIf="signUpForm.submitted && email.errors">
+            <label *ngIf="email.errors.required" class="validation-message"
+              >This field is required.</label
+            >
+            <label *ngIf="email.errors.pattern" class="validation-message"
+              >Invalid email address.</label
+            >
+          </div>
+
+          <label for="phone">phone</label>
+          <input
+            type="text"
+            #phone="ngModel"
+            [(ngModel)]="contactService.selectedContact.phone"
+            name="phone"
+            placeholder="Your phone..."
+            required
+            [ngClass]="{
+              'invalid-textbox': signUpForm.submitted && !phone.valid
+            }"
+          />
+          <div *ngIf="signUpForm.submitted && !phone.valid">
+            <label class="validation-message">This field is required.</label>
+          </div>
+
+          <label for="subject">Subject</label>
+          <textarea
+            type="text"
+            #subject="ngModel"
+            [(ngModel)]="contactService.selectedContact.subject"
+            name="subject"
+            placeholder="Write something.."
+            [ngClass]="{
+              'invalid-textbox': signUpForm.submitted && !subject.valid
+            }"
+            style="height:200px"
+          ></textarea>
+          <div *ngIf="signUpForm.submitted && !subject.valid">
+            <label class="validation-message">This field is required.</label>
+          </div>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+      <div class="col-md-5"></div>
+    </div>
+    <!--./close row-->
+  </div>
+  <!--./ close container-->
+</section>
+
+<footer class="section foot">
+  <p class="footer-sent">All Rights Reserved © YANHAMER 2019</p>
+</footer>

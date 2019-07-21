@@ -1,0 +1,196 @@
+.home {
+  height: 721px;
+  background-image: url(../../../assets/img/background.jpeg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+}
+.home .home-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* nos width w nos height (nos elklam fi nos elshasha )*/
+  transform: translate(-50%, -50%);
+}
+
+.home .home-title {
+  color: #fff;
+  font-size: 45px;
+  font-family: lucida sans;
+  margin-bottom: 20px;
+}
+
+.home .home-desc {
+  color: #ddd;
+  font-size: 18px;
+}
+
+.home .button {
+  background: #7cb62f;
+  color: #fff;
+  /*to be two button equal */
+  width: 150px;
+  text-align: center;
+  padding: 10px 0;
+  margin-right: 5px;
+}
+.section-header p {
+  width: 50%;
+  color: #888;
+  line-height: 1.5;
+  margin: 30px auto;
+}
+@media (max-width: 575px) {
+  .section-header p {
+    width: 80%;
+  }
+}
+@media (max-width: 575px) {
+  .home .home-title {
+    font-size: 25px;
+  }
+  .home .button {
+    margin-bottom: 10px;
+  }
+}
+/*===================about*/
+
+.about .about-content {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.about .content {
+  border-style: solid;
+  border-radius: 15px;
+}
+@media (max-width: 575px) {
+  .about .about-info h3 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .about .about-info {
+    text-align: center;
+  }
+}
+.about .values {
+  text-align: center;
+}
+.about .stat-info {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  font-size: 18px;
+  background: #7cb62f;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  margin: auto;
+}
+.about .Transparency {
+  position: relative;
+  padding-top: 10px;
+  left: 9px;
+}
+
+.about .Trust {
+  position: relative;
+  padding-top: 11px;
+  right: 9px;
+}
+
+.about .Persistence {
+  position: relative;
+  padding-right: 0px;
+  left: 20px;
+}
+
+.about .Synergism {
+  position: relative;
+  padding-top: auto;
+  right: 12px;
+}
+
+.about .Focus {
+  position: relative;
+  padding-top: auto;
+  left: 9px;
+}
+
+.about .Joy {
+  position: relative;
+  padding-top: 12px;
+  right: 12px;
+}
+
+.about .stat-info p {
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  right: 40px;
+  top: 50px;
+}
+.about .move {
+  margin-bottom: 50px;
+}
+.about .about-info p {
+  display: block;
+
+  color: #252525;
+  margin-bottom: 10px;
+}
+.about .about-info p {
+  width: 130px;
+  height: 130px;
+  line-height: 50px;
+  background: #7cb62f;
+  border-radius: 50%;
+  font-size: 20px;
+}
+/*===================stat*/
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/*////////////////-->contact*/
+.contact {
+  background: #f7f7f7;
+}
+/*////////////////-->footer*/
+.foot {
+  height: 50px;
+  position: relative;
+  background-color: #000;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+.footer-sent {
+  padding-top: 12px;
+}

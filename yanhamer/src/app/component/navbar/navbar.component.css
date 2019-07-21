@@ -1,0 +1,71 @@
+
+header {
+    height: auto; /*to take height of header */
+    padding: 10px 0;
+    position : fixed;
+    width: 100%;
+    z-index: 999;
+  }
+  .sticky {
+    background: #000;
+    color: #fff;
+  }
+  
+  header i.icon {
+    position: absolute;
+    right: 33px;
+    top: 15px;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+  }
+  header .logo h2 {
+    font-size: 40px;
+    color: #fff;
+  }
+  
+  header nav .nav-list {
+    list-style: none;
+    margin-bottom: 0px;
+    display: flex; /* to put link gnb b3d */
+    justify-content: space-around;
+  }
+  
+  header nav .nav-list .list a {
+    display: block; /* to add padding and margin*/
+    padding: 15px 0;
+    margin: 9px 0;
+    color: #fff;
+    text-decoration: none; /*when put mouse on link remove line */
+    transition: all 0.3s ease-in-out;
+  }
+  header nav .nav-list .list a:hover {
+    color: #7cb62f;
+  }
+  
+  @media (max-width: 575px) {
+    header {
+      background: #000;
+    }
+    header .logo {
+      text-align: center;
+    }
+    header nav .nav-list {
+      text-align: center;
+      padding: 0;
+      display: none;
+      /* display: block;*/
+    }
+    header i.icon {
+      display: block;
+    }
+  }
+  .active_btn {
+    background: #7cb62f !important;
+  }
+
+
+
+
+
+
